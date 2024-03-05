@@ -1,52 +1,30 @@
 class Empleado {
-    private String nombre;
-    private String apellidos;
-    private float tarifaPorHora;
-    private float tarifaHoraExtra;
+    String nombre;
+    String apellidos;
 
     public Empleado(String nombre, String apellidos) {
         this.nombre = nombre;
         this.apellidos = apellidos;
     }
 
-    public String getNombreCompleto() {
+    public String nombreCompleto() {
         return nombre + " " + apellidos;
     }
 
     public String tipo() {
-        return "Normal";
+        return "Empleado normal";
     }
 
-    public float getTarifaPorHora() {
-        return tarifaPorHora;
+    public float salarioTotal(float ventasTotales) {
+        return 0; // Método por implementar en las subclases
     }
 
-    public void setTarifaPorHora(float tarifaPorHora) {
-        this.tarifaPorHora = tarifaPorHora;
+    public float salarioTotal(float horasTrabajadas, float horasExtra) {
+        return 0; // Método por implementar en las subclases
     }
 
-    public float getTarifaHoraExtra() {
-        return tarifaHoraExtra;
+    @Override
+    public String toString() {
+        return String.format("%-20s %-18s %10s %12s %10s", nombreCompleto(), tipo(), "-", "-", "-");
     }
-
-    public void setTarifaHoraExtra(float tarifaHoraExtra) {
-        this.tarifaHoraExtra = tarifaHoraExtra;
-    }
-
-    public String getApellidos() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getApellidos'");
-    }
-
-    public Object getSalarioMensual() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getSalarioMensual'");
-    }
-
-    public Object getPorcentajeComision() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getPorcentajeComision'");
-    }
-
-    // Otros métodos y getters y setters necesarios
 }

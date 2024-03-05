@@ -1,20 +1,22 @@
 class EmpleadoAsalariado extends Empleado {
-    private float salarioMensual;
+    float salarioMensual;
 
     public EmpleadoAsalariado(String nombre, String apellidos, float salarioMensual) {
         super(nombre, apellidos);
         this.salarioMensual = salarioMensual;
     }
 
+    @Override
     public String tipo() {
-        return "Asalariado";
+        return "Empleado Asalariado";
     }
 
-    public Object getSalarioMensual() {
+    public float salarioTotal() {
         return salarioMensual;
     }
 
-    public void setSalarioMensual(float salarioMensual) {
-        this.salarioMensual = salarioMensual;
+    @Override
+    public String toString() {
+        return String.format("%-20s %-18s %10s %12s %10.2f", nombreCompleto(), tipo(), "-", "-", salarioMensual);
     }
 }
