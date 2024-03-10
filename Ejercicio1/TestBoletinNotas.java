@@ -9,11 +9,11 @@ public class TestBoletinNotas {
 
         // Añadir asignaturas con notas a los alumnos
         alumno1.añadirAsignatura(new Asignatura("Matemáticas", 8.5));
-        alumno1.añadirAsignatura(new Asignatura("Lengua", 9.0));
+        alumno1.añadirAsignatura(new Asignatura("Lengua     ", 9.0));
         alumno1.añadirAsignatura(new Asignatura("Historia", 7.5));
 
         alumno2.añadirAsignatura(new Asignatura("Matemáticas", 7.0));
-        alumno2.añadirAsignatura(new Asignatura("Lengua", 8.0));
+        alumno2.añadirAsignatura(new Asignatura("Lengua     ", 8.0));
         alumno2.añadirAsignatura(new Asignatura("Historia", 6.5));
 
         // Crear una lista de alumnos
